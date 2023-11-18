@@ -1,9 +1,18 @@
 const express = require('express')
+const bodyParser = require('body-parser');
 
-const app  = express();
+const app = express()
+const port = 5000
 
-app.get("/api",(req,res)=>{
-    res.json({"users":["userOne","userTwo","userThree"]})
+app.use(bodyParser.json());
+app.get("/api",(req,res) => {
+    console.log("req.body")
+    res.json({User})
 })
+app.use((req,res,next)=> {
+    console.log(`${req.method} ${req.url}`);
+    next();
+});
 
-app.listen(5000, () => { console.log("Server started on port 5000") })
+
+app.listen(port,() => {console.log("Server is running on port 5000")})

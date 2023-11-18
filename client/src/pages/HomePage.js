@@ -1,12 +1,14 @@
 import React from "react";
-import Product from "../components/Blog";
+import Research from "../components/Research";
 import Badge from 'react-bootstrap/Badge';
 export default function Homepage() {
     return (
-                <><h2>
+        <div className="hot-topic-section">
+            <h2>
                 Hot Topic <Badge bg="secondary">New</Badge>
                 </h2>
-            <Product/>
-        </>
+            <Research/>
+        </div>
+               
     )
 }
