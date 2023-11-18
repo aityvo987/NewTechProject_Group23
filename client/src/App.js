@@ -8,6 +8,7 @@ import Sidebar from './components/SideBar';
 import ProfilePage from './pages/Profile';
 import ResearchPage from './pages/VIewResearch';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 function App() {
   // const [backendData, setBackendData] = useState ([{}])
   // useEffect (() => {
@@ -33,6 +34,7 @@ function App() {
           {/* <Route exact path="/research/:idresearch" component={ResearchPage} /> */}
           <Route path='/research' element={<ResearchPage/>}/>
           <Route path='/login' element={<Login/>}/>
+          <Route path='/signup' element={<Signup/>}/>
         </Routes>
       </Router>
       </div>
