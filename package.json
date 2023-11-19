@@ -4,7 +4,10 @@
   "description": "Node.js + MongoDB: JWT Authentication & Authorization",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init": "concurrently \"cd server && npm install nodeserver\" \"cd client && npm install react-scripts --save\" ",
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\" "
+    
   },
   "keywords": [
     "node.js",
